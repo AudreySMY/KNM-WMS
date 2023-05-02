@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VGutzQwAkOWHscKRRetQlFLnjYCo/6f92NRphyTPW+8=",
+  "Source": "CloneSAP-API",
+  "BasePath": "_content/CloneSAP-API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
