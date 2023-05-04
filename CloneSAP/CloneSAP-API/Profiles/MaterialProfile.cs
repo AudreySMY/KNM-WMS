@@ -9,7 +9,7 @@ namespace CloneSAP_API.Profiles;
     public MaterialProfile()
     {
         CreateMap<CreateMaterialDto, Material>();
-        CreateMap<Material, ReadMaterialDto>();
+        CreateMap<Material, ReadMaterialDto>();//.ForMember(materialDto => materialDto.gridDto, opt => opt.MapFrom(material => material.grid));
         CreateMap<UpdateMaterialDto, Material>();
         CreateMap<Material, UpdateMaterialDto>();
     }

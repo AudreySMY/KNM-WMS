@@ -8,15 +8,48 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20230502172626_material.cs" />
+    <Compile Remove="Migrations\20230502172626_material.Designer.cs" />
+    <Compile Remove="Migrations\20230503183239_grid.cs" />
+    <Compile Remove="Migrations\20230503183239_grid.Designer.cs" />
+    <Compile Remove="Migrations\20230503184452_grid add.cs" />
+    <Compile Remove="Migrations\20230503184452_grid add.Designer.cs" />
+    <Compile Remove="Migrations\20230503190055_Grid Remove.cs" />
+    <Compile Remove="Migrations\20230503190055_Grid Remove.Designer.cs" />
+    <Compile Remove="Migrations\20230503193815_Grid linked material.cs" />
+    <Compile Remove="Migrations\20230503193815_Grid linked material.Designer.cs" />
+    <Compile Remove="Migrations\20230503202731_Su ADD.cs" />
+    <Compile Remove="Migrations\20230503202731_Su ADD.Designer.cs" />
+    <Compile Remove="Migrations\20230503220909_stock id.cs" />
+    <Compile Remove="Migrations\20230503220909_stock id.Designer.cs" />
+    <Compile Remove="Migrations\20230503231519_stock id 2.cs" />
+    <Compile Remove="Migrations\20230503231519_stock id 2.Designer.cs" />
+    <Compile Remove="Migrations\20230503233940_stock id 3.cs" />
+    <Compile Remove="Migrations\20230503233940_stock id 3.Designer.cs" />
+    <Compile Remove="Migrations\20230504000638_recriacao.cs" />
+    <Compile Remove="Migrations\20230504000638_recriacao.Designer.cs" />
+    <Compile Remove="Migrations\20230504000811_patch stock id.cs" />
+    <Compile Remove="Migrations\20230504000811_patch stock id.Designer.cs" />
+    <Compile Remove="Migrations\SAPContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.15" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.13" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,11 @@
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\GuiSAP.exe.config
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\GuiSAP.exe
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\GuiSAP.pdb
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.csproj.AssemblyReference.cache
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.csproj.SuggestedBindingRedirects.cache
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.Properties.Resources.resources
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.csproj.GenerateResource.cache
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.csproj.CoreCompileInputs.cache
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.exe
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.pdb
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.Form1.resources

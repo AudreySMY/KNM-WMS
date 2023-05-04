@@ -35,7 +35,7 @@ public class MaterialController : Controller
     [HttpGet]
     public IEnumerable<ReadMaterialDto> GetMaterials([FromQuery] int skip = 0, [FromQuery] int Take = 100)
     {
-        return _mapper.Map<List<ReadMaterialDto>>(_context.Material.Skip( skip ).Take( Take ));
+        return _mapper.Map<List<ReadMaterialDto>>(_context.Material.ToList());
     }
 
 }
