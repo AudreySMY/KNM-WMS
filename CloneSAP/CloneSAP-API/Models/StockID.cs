@@ -5,7 +5,7 @@ namespace CloneSAP_API.Models;
 public class StockID
 {
     [Key]
-    public int StockIDn { get; set; }
+    public int ID { get; set; }
 
 
     public int MaterialId { get; set; }
@@ -14,5 +14,6 @@ public class StockID
 
     public int GridId { get; set; }
     public virtual Grid Grid { get; set; }
+
 
 }

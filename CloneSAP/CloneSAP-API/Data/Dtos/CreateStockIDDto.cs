@@ -7,7 +7,7 @@ public class CreateStockIDDto
 {
     [Key]
     [Required]
-    public int stockIDn { get; set; }
+    public int StockIDn { get; set; }
 
     [Required]
     public int MaterialId { get; set; }

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CloneSAP_API.Migrations
 {
     [DbContext(typeof(SAPContext))]
-    [Migration("20230503231519_stock id 2")]
-    partial class stockid2
+    [Migration("20230504200653_ storage unit 2")]
+    partial class storageunit2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,73 +64,82 @@ namespace CloneSAP_API.Migrations
 
             modelBuilder.Entity("CloneSAP_API.Models.StockID", b =>
                 {
-                    b.Property<int>("stockIDn")
+                    b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<int>("gridId")
+                    b.Property<int>("GridId")
                         .HasColumnType("int");
 
-                    b.Property<int>("materialId")
+                    b.Property<int>("MaterialId")
                         .HasColumnType("int");
 
-                    b.HasKey("stockIDn");
+                    b.HasKey("ID");
 
-                    b.HasIndex("gridId");
+                    b.HasIndex("GridId");
 
-                    b.HasIndex("materialId");
+                    b.HasIndex("MaterialId");
 
                     b.ToTable("StockID");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.StorageUnit", b =>
                 {
-                    b.Property<int>("SU")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasMaxLength(10)
+                        .HasColumnType("int");
+
+                    b.Property<int>("SIID")
                         .HasColumnType("int");
 
                     b.Property<int>("quantity")
                         .HasColumnType("int");
 
-                    b.Property<int>("stockIDn")
-                        .HasColumnType("int");
+                    b.HasKey("Id");
 
-                    b.HasKey("SU");
-
-                    b.HasIndex("stockIDn");
+                    b.HasIndex("SIID");
 
                     b.ToTable("StorageUnit");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.StockID", b =>
                 {
-                    b.HasOne("CloneSAP_API.Models.Grid", "grid")
-                        .WithMany()
-                        .HasForeignKey("gridId")
+                    b.HasOne("CloneSAP_API.Models.Grid", "Grid")
+                        .WithMany("StockIDs")
+                        .HasForeignKey("GridId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("CloneSAP_API.Models.Material", "material")
-                        .WithMany()
-                        .HasForeignKey("materialId")
+                    b.HasOne("CloneSAP_API.Models.Material", "Material")
+                        .WithMany("StockIDs")
+                        .HasForeignKey("MaterialId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("grid");
+                    b.Navigation("Grid");
 
-                    b.Navigation("material");
+                    b.Navigation("Material");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.StorageUnit", b =>
                 {
-                    b.HasOne("CloneSAP_API.Models.StockID", "StockID")
+                    b.HasOne("CloneSAP_API.Models.StockID", "SI")
                         .WithMany()
-                        .HasForeignKey("stockIDn")
+                        .HasForeignKey("SIID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("StockID");
+                    b.Navigation("SI");
+                });
+
+            modelBuilder.Entity("CloneSAP_API.Models.Grid", b =>
+                {
+                    b.Navigation("StockIDs");
+                });
+
+            modelBuilder.Entity("CloneSAP_API.Models.Material", b =>
+                {
+                    b.Navigation("StockIDs");
                 });
 #pragma warning restore 612, 618
         }

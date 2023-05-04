@@ -9,7 +9,7 @@ public class SAPContext:DbContext
 
 	public DbSet<Material> Material { get; set; }
     public DbSet<Grid> Grid { get; set; }
-    public DbSet<StorageUnit> StorageUnit { get; set; }
     public DbSet<StockID> StockID { get; set; }
+    public DbSet<StorageUnit> StorageUnit { get; set; }
 }
 

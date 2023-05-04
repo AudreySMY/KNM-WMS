@@ -2,14 +2,14 @@
 using CloneSAP_API.Data.Dtos;
 using CloneSAP_API.Models;
 
-namespace CloneSAP_API.Profiles;
-
-public class StorageUnitProfile : Profile
+namespace CloneSAP_API.Profiles
 {
-    public StorageUnitProfile()
+    public class StorageUnitProfile : Profile
     {
-        CreateMap<CreateStorageUnitDto, StorageUnit>();
-        CreateMap<StorageUnit, ReadStorageUnitDto>();
-
+        public StorageUnitProfile()
+        {
+            CreateMap<CreateStorageUnitDto, StorageUnit>();
+            CreateMap<StorageUnit, ReadStorageUnitDto>();
+        }
     }
 }

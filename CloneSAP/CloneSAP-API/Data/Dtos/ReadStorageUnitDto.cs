@@ -5,6 +5,8 @@ namespace CloneSAP_API.Data.Dtos;
 
 public class ReadStorageUnitDto
 {
-    public int SU { get; set; }
+    public int Id { get; set; }
+    public virtual ReadStockIDDto SI { get; set; }
     public int quantity { get; set; }
+    public DateTime CreatingDating { get; set; };
 }

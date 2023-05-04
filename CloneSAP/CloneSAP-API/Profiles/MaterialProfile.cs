@@ -4,7 +4,7 @@ using CloneSAP_API.Models;
 
 namespace CloneSAP_API.Profiles;
 
-    public class MaterialProfile : Profile
+public class MaterialProfile : Profile
     {
     public MaterialProfile()
     {

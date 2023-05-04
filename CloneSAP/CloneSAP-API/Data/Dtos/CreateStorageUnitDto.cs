@@ -5,10 +5,12 @@ namespace CloneSAP_API.Data.Dtos;
 
 public class CreateStorageUnitDto
 {
-
-    public int SU { get; set; }
-
+    [Key]
     [Required]
-    [Range(0, 9999999999)]
+    public int Id { get; set; }
+    public int SIID { get; set; }
+    [Required]
     public int quantity { get; set; }
+
+    public DateTime CreatingDating { get; set; } = DateTime.Now;
 }

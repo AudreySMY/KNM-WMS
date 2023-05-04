@@ -8,10 +8,10 @@ public class ReadStockIDDto
 
     public int stockIDn { get; set; }
 
-    public int materialId;
+    public int materialId { get; set; }
     public virtual ReadMaterialDto material { get; set; }
 
 
-    public int gridId;
+    public int gridId { get; set; }
     public virtual ReadGridDto grid { get; set; }
 }

@@ -13,5 +13,5 @@ public class CreateGridDto
     public int gridId { get; set; }
 
 
-    
+
 }

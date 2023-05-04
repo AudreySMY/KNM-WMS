@@ -1,42 +1,38 @@
 ﻿using AutoMapper;
-using CloneSAP_API.Data.Dtos;
 using CloneSAP_API.Data;
-using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+using CloneSAP_API.Data.Dtos;
 using CloneSAP_API.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CloneSAP_API.Controllers;
+
 
 [ApiController]
 [Route("[Controller]")]
 public class StorageUnitController : Controller
 {
-    private SAPContext _context;
-    private IMapper _mapper;
+    private  SAPContext _context;
+    private  IMapper _mapper;
 
-    public StorageUnitController(SAPContext context, IMapper mapper)
-    {
-        _context = context;
-        _mapper = mapper;
+    public StorageUnitController(SAPContext context,IMapper mapper)
+	{
+        _context= context;
+        _mapper= mapper;
     }
 
     [HttpPost]
 
-    public void PostStorageUnit([FromBody] CreateGridDto storageUnitDto)
+    public void PostStorageUnit([FromBody]CreateStorageUnitDto suDto)
     {
-        StorageUnit storageUnit = _mapper.Map<StorageUnit>(storageUnitDto);
+        StorageUnit sUnit = _mapper.Map<StorageUnit>(suDto);
 
-        _context.StorageUnit.Add(storageUnit);
+        _context.StorageUnit.Add(sUnit);
         _context.SaveChanges();
-
     }
-
     [HttpGet]
-    public IEnumerable<ReadStorageUnitDto> GetGrid([FromQuery] int skip = 0, [FromQuery] int Take = 100)
+
+    public IEnumerable<ReadStorageUnitDto> GetStorageUnits([FromQuery]int skip=0, [FromQuery] int take = 100)
     {
-        return _mapper.Map<List<ReadStorageUnitDto>>(_context.StorageUnit.Skip(skip).Take(Take));
+        return _mapper.Map<List<ReadStorageUnitDto>>(_context.StorageUnit.Skip(skip).Take(take).ToList());
     }
-
-
 }
-

@@ -15,6 +15,5 @@ namespace CloneSAP_API.Models
 
         public virtual ICollection<StockID> StockIDs { get; set; }
 
-
     }
 }

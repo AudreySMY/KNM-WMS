@@ -11,29 +11,6 @@
     <Compile Remove="Data\Dtos\UpdateGridDto.cs" />
     <Compile Remove="Data\Dtos\UpdateMaterialDto.cs" />
     <Compile Remove="Data\Dtos\UpdateStorageUnitDto.cs" />
-    <Compile Remove="Migrations\20230502172626_material.cs" />
-    <Compile Remove="Migrations\20230502172626_material.Designer.cs" />
-    <Compile Remove="Migrations\20230503183239_grid.cs" />
-    <Compile Remove="Migrations\20230503183239_grid.Designer.cs" />
-    <Compile Remove="Migrations\20230503184452_grid add.cs" />
-    <Compile Remove="Migrations\20230503184452_grid add.Designer.cs" />
-    <Compile Remove="Migrations\20230503190055_Grid Remove.cs" />
-    <Compile Remove="Migrations\20230503190055_Grid Remove.Designer.cs" />
-    <Compile Remove="Migrations\20230503193815_Grid linked material.cs" />
-    <Compile Remove="Migrations\20230503193815_Grid linked material.Designer.cs" />
-    <Compile Remove="Migrations\20230503202731_Su ADD.cs" />
-    <Compile Remove="Migrations\20230503202731_Su ADD.Designer.cs" />
-    <Compile Remove="Migrations\20230503220909_stock id.cs" />
-    <Compile Remove="Migrations\20230503220909_stock id.Designer.cs" />
-    <Compile Remove="Migrations\20230503231519_stock id 2.cs" />
-    <Compile Remove="Migrations\20230503231519_stock id 2.Designer.cs" />
-    <Compile Remove="Migrations\20230503233940_stock id 3.cs" />
-    <Compile Remove="Migrations\20230503233940_stock id 3.Designer.cs" />
-    <Compile Remove="Migrations\20230504000638_recriacao.cs" />
-    <Compile Remove="Migrations\20230504000638_recriacao.Designer.cs" />
-    <Compile Remove="Migrations\20230504000811_patch stock id.cs" />
-    <Compile Remove="Migrations\20230504000811_patch stock id.Designer.cs" />
-    <Compile Remove="Migrations\SAPContextModelSnapshot.cs" />
   </ItemGroup>
 
   <ItemGroup>

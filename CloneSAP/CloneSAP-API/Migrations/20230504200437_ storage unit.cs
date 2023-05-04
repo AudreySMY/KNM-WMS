@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CloneSAP_API.Migrations
 {
     /// <inheritdoc />
-    public partial class recriacao : Migration
+    public partial class storageunit : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -51,14 +51,14 @@ namespace CloneSAP_API.Migrations
                 name: "StockID",
                 columns: table => new
                 {
-                    StockIDn = table.Column<int>(type: "int", nullable: false)
+                    ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     MaterialId = table.Column<int>(type: "int", nullable: false),
                     GridId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StockID", x => x.StockIDn);
+                    table.PrimaryKey("PK_StockID", x => x.ID);
                     table.ForeignKey(
                         name: "FK_StockID_Grid_GridId",
                         column: x => x.GridId,
@@ -78,19 +78,19 @@ namespace CloneSAP_API.Migrations
                 name: "StorageUnit",
                 columns: table => new
                 {
-                    SU = table.Column<int>(type: "int", maxLength: 10, nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    StockIDn = table.Column<int>(type: "int", nullable: false),
+                    SIID = table.Column<int>(type: "int", nullable: false),
                     quantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_StorageUnit", x => x.SU);
+                    table.PrimaryKey("PK_StorageUnit", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StorageUnit_StockID_StockIDn",
-                        column: x => x.StockIDn,
+                        name: "FK_StorageUnit_StockID_SIID",
+                        column: x => x.SIID,
                         principalTable: "StockID",
-                        principalColumn: "StockIDn",
+                        principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
@@ -106,9 +106,9 @@ namespace CloneSAP_API.Migrations
                 column: "MaterialId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StorageUnit_StockIDn",
+                name: "IX_StorageUnit_SIID",
                 table: "StorageUnit",
-                column: "StockIDn");
+                column: "SIID");
         }
 
         /// <inheritdoc />
