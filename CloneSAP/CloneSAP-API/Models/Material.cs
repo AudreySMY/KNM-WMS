@@ -13,5 +13,7 @@ public class Material
     [Required]
     public float volume { get; set; }
 
+    public virtual ICollection<StockID> StockIDs { get; set;}
+
 }
 

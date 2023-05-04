@@ -13,5 +13,8 @@ namespace CloneSAP_API.Models
         [Required]
         public string SizeCod { get; set; }
 
+        public virtual ICollection<StockID> StockIDs { get; set; }
+
+
     }
 }

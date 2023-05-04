@@ -10,12 +10,12 @@ public class StorageUnit
     public int SU { get; set; }
 
     [Required]
-    public int stockIDupc;
+    public int stockIDn;
     public virtual StockID StockID { get; set; }
 
     
     [Required]
-    [Range(0,9999999999)]
+    [Range(0,9999)]
     public int quantity { get; set; }
 
 }

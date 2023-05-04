@@ -10,7 +10,5 @@ public class GridProfile : Profile
     {
         CreateMap<CreateGridDto, Grid>();
         CreateMap<Grid, ReadGridDto>();
-        CreateMap<UpdateGridDto, Grid>();
-        CreateMap<Grid, UpdateGridDto>();
     }
 }

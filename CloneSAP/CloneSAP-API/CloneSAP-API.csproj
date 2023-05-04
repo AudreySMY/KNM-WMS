@@ -8,6 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Data\Dtos\UpdateGridDto.cs" />
+    <Compile Remove="Data\Dtos\UpdateMaterialDto.cs" />
+    <Compile Remove="Data\Dtos\UpdateStorageUnitDto.cs" />
     <Compile Remove="Migrations\20230502172626_material.cs" />
     <Compile Remove="Migrations\20230502172626_material.Designer.cs" />
     <Compile Remove="Migrations\20230503183239_grid.cs" />

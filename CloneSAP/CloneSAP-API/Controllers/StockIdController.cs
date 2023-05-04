@@ -33,7 +33,7 @@ public class StockIdController : Controller
     [HttpGet]
     public IEnumerable<ReadStockIDDto> GetGrid([FromQuery] int skip = 0, [FromQuery] int Take = 100)
     {
-        return _mapper.Map<List<ReadStockIDDto>>(_context.StockID.Skip(skip).Take(Take));
+        return _mapper.Map<List<ReadStockIDDto>>(_context.StockID.Skip(skip).Take(Take).ToList());
     }
 
 }

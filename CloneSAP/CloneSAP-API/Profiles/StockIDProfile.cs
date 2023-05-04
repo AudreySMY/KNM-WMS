@@ -8,7 +8,7 @@ public class StockIDProfile : Profile
 {
     public StockIDProfile()
     {
-        CreateMap<CreateStockIDDto, StorageUnit>();
+        CreateMap<CreateStockIDDto, StockID>();
         CreateMap<StockID, ReadStockIDDto>().ForMember(stockIDDt => stockIDDt.material, opts => opts.MapFrom(stockID => stockID.Material))
                                             .ForMember(stockIDDt => stockIDDt.grid, opts => opts.MapFrom(stockID => stockID.Grid));
 

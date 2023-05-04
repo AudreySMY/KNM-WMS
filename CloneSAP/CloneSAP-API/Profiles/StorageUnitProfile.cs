@@ -9,9 +9,7 @@ public class StorageUnitProfile : Profile
     public StorageUnitProfile()
     {
         CreateMap<CreateStorageUnitDto, StorageUnit>();
-        CreateMap<StorageUnit, ReadStorageUnitDto>();//.ForMember(storageDto => storageDto.materialDto, opts => opts.MapFrom(storageUnit => storageUnit.material));
+        CreateMap<StorageUnit, ReadStorageUnitDto>();
 
-        CreateMap<UpdateStorageUnitDto, StorageUnit>();
-        CreateMap<StorageUnit, UpdateStorageUnitDto>();
     }
 }
