@@ -3,6 +3,7 @@ using System;
 using CloneSAP_API.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CloneSAP_API.Migrations
 {
     [DbContext(typeof(SAPContext))]
-    partial class SAPContextModelSnapshot : ModelSnapshot
+    [Migration("20230504202517_ storage unit Time ")]
+    partial class storageunitTime
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,7 +41,7 @@ namespace CloneSAP_API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Grid", (string)null);
+                    b.ToTable("Grid");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.Material", b =>
@@ -57,7 +60,7 @@ namespace CloneSAP_API.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Material", (string)null);
+                    b.ToTable("Material");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.StockID", b =>
@@ -78,7 +81,7 @@ namespace CloneSAP_API.Migrations
 
                     b.HasIndex("MaterialId");
 
-                    b.ToTable("StockID", (string)null);
+                    b.ToTable("StockID");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.StorageUnit", b =>
@@ -103,7 +106,7 @@ namespace CloneSAP_API.Migrations
 
                     b.HasIndex("SIID");
 
-                    b.ToTable("StorageUnit", (string)null);
+                    b.ToTable("StorageUnit");
                 });
 
             modelBuilder.Entity("CloneSAP_API.Models.StockID", b =>

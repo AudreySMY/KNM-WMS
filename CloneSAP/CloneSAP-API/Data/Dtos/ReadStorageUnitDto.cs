@@ -8,5 +8,6 @@ public class ReadStorageUnitDto
     public int Id { get; set; }
     public virtual ReadStockIDDto SI { get; set; }
     public int quantity { get; set; }
-    public DateTime CreatingDating { get; set; };
+    public DateTime CreatingDating { get; set; }
+    public DateTime LastModif { get; set; }
 }

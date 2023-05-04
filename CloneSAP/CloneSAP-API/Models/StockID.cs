@@ -14,6 +14,7 @@ public class StockID
 
     public int GridId { get; set; }
     public virtual Grid Grid { get; set; }
+    public virtual ICollection<StorageUnit> StorageUnits { get; set; }
 
 
 }
