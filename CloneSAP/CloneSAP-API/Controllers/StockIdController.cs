@@ -22,12 +22,13 @@ public class StockIdController : Controller
 
     [HttpPost]
 
-    public void PostStockID([FromBody] CreateStockIDDto stockIDDto)
+    public IActionResult PostStockID([FromBody] CreateStockIDDto stockIDDto)
     {
         StockID stockID = _mapper.Map<StockID>(stockIDDto);
-
+        if(stockID == null)return NotFound();
         _context.StockID.Add(stockID);
         _context.SaveChanges();
+        return Ok(stockID);
 
     }
 

@@ -23,12 +23,13 @@ public class GridController : Controller
 
     [HttpPost]
 
-    public void PostGrid([FromBody] CreateGridDto gridDto)
+    public IActionResult PostGrid([FromBody] CreateGridDto gridDto)
     {
         Grid grid = _mapper.Map<Grid>(gridDto);
-
+        if(grid == null) return NotFound();
         _context.Grid.Add(grid);
         _context.SaveChanges();
+        return Ok(grid);
 
     }
 

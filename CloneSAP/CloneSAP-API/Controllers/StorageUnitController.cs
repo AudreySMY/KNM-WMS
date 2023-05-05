@@ -23,12 +23,13 @@ public class StorageUnitController : Controller
 
     [HttpPost]
 
-    public void PostStorageUnit([FromBody]CreateStorageUnitDto suDto)
+    public IActionResult PostStorageUnit([FromBody]CreateStorageUnitDto suDto)
     {
         StorageUnit sUnit = _mapper.Map<StorageUnit>(suDto);
-
+        if (sUnit == null) return NotFound();
         _context.StorageUnit.Add(sUnit);
         _context.SaveChanges();
+        return Ok(sUnit);
     }
     [HttpGet]
 

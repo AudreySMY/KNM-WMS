@@ -25,12 +25,13 @@ public class MaterialController : Controller
 
     [HttpPost]
 
-    public void PostMaterial([FromBody] CreateMaterialDto MaterialDto)
+    public IActionResult PostMaterial([FromBody] CreateMaterialDto MaterialDto)
     {
         Material material = _mapper.Map<Material>(MaterialDto);
-
+        if(material == null)return NotFound();
         _context.Material.Add(material);
         _context.SaveChanges();
+        return Ok(material);
 
     }
 
