@@ -3,6 +3,7 @@ using CloneSAP_API.Data;
 using CloneSAP_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using CloneSAP_API.Data.Dtos;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace CloneSAP_API.Controllers;
 
@@ -36,4 +37,42 @@ public class StockIdController : Controller
         return _mapper.Map<List<ReadStockIDDto>>(_context.StockID.Skip(skip).Take(Take).ToList());
     }
 
+    [HttpGet("{id}")]
+
+    public IActionResult GetStockIDPID(int id)
+    {
+        var stockid = _context.StockID.FirstOrDefault(stockid => stockid.ID == id);
+        if (stockid == null) return NotFound();
+        var stockidDto = _mapper.Map<ReadStockIDDto>(stockid);
+        return Ok(stockidDto);
+    }
+
+    [HttpPut("{id}")]
+
+    public IActionResult PutStockID(int id, [FromBody] UpgradeStockIDDto stockidDto)
+    {
+        var stockid = _context.StockID.FirstOrDefault(stockid => stockid.ID == id);
+        if (stockid == null) return NotFound();
+        _mapper.Map(stockidDto, stockid);
+        _context.SaveChanges();
+        return NoContent();
+    }
+
+    [HttpPatch("{id}")]
+
+    public IActionResult PatchstockidD(int id, JsonPatchDocument<UpgradeStockIDDto> patch)
+    {
+        var stockid = _context.StockID.FirstOrDefault(stockid => stockid.ID == id);
+        if (stockid == null) return NotFound();
+
+        var stockidToPatch = _mapper.Map<UpgradeStockIDDto>(stockid);
+
+        patch.ApplyTo(stockidToPatch, ModelState);
+        if (!TryValidateModel(stockidToPatch)) return ValidationProblem(ModelState);
+        _mapper.Map(stockidToPatch, stockid);
+
+        _context.SaveChanges();
+        return NoContent();
+    }
 }
+

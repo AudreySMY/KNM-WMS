@@ -11,6 +11,8 @@ public class StockIDProfile : Profile
         CreateMap<CreateStockIDDto, StockID>();
         CreateMap<StockID, ReadStockIDDto>().ForMember(stockIDDt => stockIDDt.material, opts => opts.MapFrom(stockID => stockID.Material))
                                             .ForMember(stockIDDt => stockIDDt.grid, opts => opts.MapFrom(stockID => stockID.Grid));
+        CreateMap<UpgradeStockIDDto, StockID>();
+        CreateMap<StockID, UpgradeStockIDDto>();
 
 
     }

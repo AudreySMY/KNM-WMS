@@ -10,5 +10,8 @@ public class GridProfile : Profile
     {
         CreateMap<CreateGridDto, Grid>();
         CreateMap<Grid, ReadGridDto>();
+        CreateMap<UpgradeGridDto, Grid>();
+        CreateMap<Grid, UpgradeGridDto>();
+
     }
 }

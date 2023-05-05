@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using CloneSAP_API.Models;
 using CloneSAP_API.Data.Dtos;
+using Microsoft.AspNetCore.JsonPatch;
 
 namespace CloneSAP_API.Controllers;
 
@@ -35,6 +36,43 @@ public class GridController : Controller
     public IEnumerable<ReadGridDto> GetGrid([FromQuery] int skip = 0, [FromQuery] int Take = 100)
     {
         return _mapper.Map<List<ReadGridDto>>(_context.Grid.Skip(skip).Take(Take));
+    }
+
+    [HttpGet("{id}")]
+    public IActionResult GetGridPID(int id)
+    {
+       var grid = _context.Grid.FirstOrDefault(grid=>grid.Id == id);
+        if(grid == null)return NotFound();
+        var gridDto = _mapper.Map<ReadGridDto>(grid);
+        return Ok(gridDto);
+    }
+
+    [HttpPut("{id}")]
+
+    public IActionResult PutGrid(int id, [FromBody] UpgradeGridDto gridDto)
+    {
+        var grid = _context.Grid.FirstOrDefault(grid => grid.Id == id);
+        if(grid == null)return NotFound();
+        _mapper.Map(gridDto, grid);
+        _context.SaveChanges();
+        return NoContent();
+    }
+    [HttpPatch("{id}")]
+
+    public IActionResult PatchGrid(int id, JsonPatchDocument<UpgradeGridDto> patch )
+    {
+        var grid = _context.Grid.FirstOrDefault(grid => grid.Id == id);
+        if (grid == null) return NotFound();
+
+        var gridToPatch = _mapper.Map<UpgradeGridDto>(grid);
+
+        patch.ApplyTo(gridToPatch,ModelState);
+
+        if(!TryValidateModel(gridToPatch)) return ValidationProblem(ModelState);
+        _mapper.Map(gridToPatch, grid);
+
+        _context.SaveChanges();
+        return NoContent();
     }
 
 

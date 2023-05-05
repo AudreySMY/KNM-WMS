@@ -10,6 +10,8 @@ namespace CloneSAP_API.Profiles
         {
             CreateMap<CreateStorageUnitDto, StorageUnit>();
             CreateMap<StorageUnit, ReadStorageUnitDto>();
+            CreateMap<UpgradeStorageUnitDto, StorageUnit>();
+            CreateMap<StorageUnit, UpgradeStorageUnitDto>();
         }
     }
 }

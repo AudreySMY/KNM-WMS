@@ -2,8 +2,10 @@
 using CloneSAP_API.Data;
 using CloneSAP_API.Data.Dtos;
 using CloneSAP_API.Models;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Pomelo.EntityFrameworkCore.MySql.Query.Internal;
+using System.Text.Json;
 
 namespace CloneSAP_API.Controllers;
 
@@ -37,6 +39,42 @@ public class MaterialController : Controller
     {
         return _mapper.Map<List<ReadMaterialDto>>(_context.Material.ToList());
     }
+    [HttpGet("{id}")]
 
+    public IActionResult GetMaterialPID(int id) 
+    {
+        var material = _context.Material.FirstOrDefault(material => material.Id == id);
+        if (material == null) return NotFound();
+        var materialDto = _mapper.Map<ReadMaterialDto>( material);
+        return Ok(materialDto);
+    }
+
+    [HttpPut("{id}")]
+
+    public IActionResult GetMaterialPID(int id, [FromBody] UpgradeMaterialDto materialDto )
+    {
+        var material = _context.Material.FirstOrDefault(material => material.Id == id);
+        if (material == null) return NotFound();
+        _mapper.Map(materialDto, material);
+        _context.SaveChanges();
+        return NoContent();
+    }
+
+    [HttpPatch("{id}")]
+
+    public IActionResult GetMaterialPID(int id, JsonPatchDocument<UpgradeMaterialDto> patch)
+    {
+        var material = _context.Material.FirstOrDefault(material => material.Id == id);
+        if (material == null) return NotFound();
+
+        var materialToPatch = _mapper.Map<UpgradeMaterialDto>( material );
+
+        patch.ApplyTo( materialToPatch, ModelState );
+        if (!TryValidateModel(materialToPatch)) return ValidationProblem(ModelState);
+        _mapper.Map(materialToPatch, material);
+        
+        _context.SaveChanges();
+        return NoContent();
+    }
 }
 

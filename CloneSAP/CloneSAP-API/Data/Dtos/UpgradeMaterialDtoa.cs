@@ -2,7 +2,7 @@
 
 namespace CloneSAP_API.Data.Dtos;
 
-public class UpdateMaterialDto
+public class UpgradeMaterialDto
 {
 
     [Required(ErrorMessage = "O MATERIAL E OBRIGATORIO")]

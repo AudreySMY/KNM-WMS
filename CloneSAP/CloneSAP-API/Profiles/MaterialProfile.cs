@@ -10,6 +10,8 @@ public class MaterialProfile : Profile
     {
         CreateMap<CreateMaterialDto, Material>();
         CreateMap<Material, ReadMaterialDto>();
+        CreateMap<UpgradeMaterialDto, Material>();
+        CreateMap<Material, UpgradeMaterialDto>();
     }
     }
 
