@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSAP-API", "CloneSAP-AP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuiSAP", "GuiSAP\GuiSAP.csproj", "{AB48FD4E-562C-43A8-B096-F18EDE8D2418}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEnd", "BackEnd\BackEnd.csproj", "{54B5E0E6-F503-4370-BC7A-684E82B94886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserSAP", "UserSAP\UserSAP.csproj", "{9FEE3C6E-4EC3-43B8-9149-543CDFEF0AC1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{AB48FD4E-562C-43A8-B096-F18EDE8D2418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB48FD4E-562C-43A8-B096-F18EDE8D2418}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB48FD4E-562C-43A8-B096-F18EDE8D2418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54B5E0E6-F503-4370-BC7A-684E82B94886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54B5E0E6-F503-4370-BC7A-684E82B94886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54B5E0E6-F503-4370-BC7A-684E82B94886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54B5E0E6-F503-4370-BC7A-684E82B94886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FEE3C6E-4EC3-43B8-9149-543CDFEF0AC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FEE3C6E-4EC3-43B8-9149-543CDFEF0AC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FEE3C6E-4EC3-43B8-9149-543CDFEF0AC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FEE3C6E-4EC3-43B8-9149-543CDFEF0AC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

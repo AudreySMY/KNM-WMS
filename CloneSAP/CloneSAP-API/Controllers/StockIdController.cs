@@ -9,7 +9,7 @@ namespace CloneSAP_API.Controllers;
 
 [ApiController]
 [Route("[Controller]")]
-public class StockIdController : Controller
+public class StockIdController : ControllerBase
 {
     private SAPContext _context;
     private IMapper _mapper;

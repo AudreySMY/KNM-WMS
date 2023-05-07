@@ -10,7 +10,7 @@ namespace CloneSAP_API.Controllers;
 
 [ApiController]
 [Route("[Controller]")]
-public class StorageUnitController : Controller
+public class StorageUnitController : ControllerBase
 {
     private  SAPContext _context;
     private  IMapper _mapper;

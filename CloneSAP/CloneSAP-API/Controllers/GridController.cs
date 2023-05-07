@@ -10,7 +10,7 @@ namespace CloneSAP_API.Controllers;
 
 [ApiController]
 [Route("[Controller]")]
-public class GridController : Controller
+public class GridController : ControllerBase
 {
     private SAPContext _context;
     private IMapper _mapper;

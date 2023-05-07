@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "ooJAA22n0BlWAL59xMVm14MWX+YZUcchRG6SxDQujJM=",
+  "Source": "UserSAP",
+  "BasePath": "_content/UserSAP",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
