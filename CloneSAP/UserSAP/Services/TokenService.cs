@@ -18,7 +18,9 @@ public class TokenService
 
         };
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A8SDU9ASDISAUD7AS6DASHFCZ9IASDASD9USA7DY7SAD"));
+
         var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
         var token = new JwtSecurityToken
         (
             expires: DateTime.Now.AddMinutes(10),

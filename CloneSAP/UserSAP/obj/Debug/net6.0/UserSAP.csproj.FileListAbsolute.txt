@@ -295,3 +295,4 @@ C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\UserSAP\obj\Debug\n
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\UserSAP\obj\Debug\net6.0\UserSAP.pdb
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\UserSAP\obj\Debug\net6.0\UserSAP.genruntimeconfig.cache
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\UserSAP\obj\Debug\net6.0\ref\UserSAP.dll
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\UserSAP\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
