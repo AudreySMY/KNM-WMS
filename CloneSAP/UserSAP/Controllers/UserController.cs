@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using UserSAP.Data;
 using UserSAP.Data.Dtos;
 using UserSAP.Models;
+using UserSAP.Services;
 
 namespace UserSAP.Controllers;
 
@@ -11,22 +12,23 @@ namespace UserSAP.Controllers;
 [Route("[Controller]")]
 public class UserController : ControllerBase
 {
-    public IMapper _mapper;
-    public UserManager<User> _userManager;
+   private UserService _userService;
 
-    public UserController(IMapper mapper, UserManager<User> userManager)
+    public UserController(UserService registerService)
     {
-        _mapper = mapper;
-        _userManager = userManager;
+        _userService = registerService;
     }
 
-    [HttpPost]
+    [HttpPost("Register")]
     public async Task<IActionResult> RegisterUser(CreateUserDto dto)
     {
-        User user = _mapper.Map<User>(dto);
-        IdentityResult resultado = await _userManager.CreateAsync(user,dto.Password);
-
-        if(resultado.Succeeded)return Ok(user);
-        throw new ApplicationException("Falha Ao cadastrar usuario");
+        await _userService.Register(dto);
+        return Ok("Usuario cadastrado");
+    }
+    [HttpPost("Login")]
+    public IActionResult Login(LoginUserDto dto)
+    {
+        _userService.Login(dto);
+        return Ok("Login OK");
     }
 }

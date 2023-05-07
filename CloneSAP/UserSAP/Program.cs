@@ -2,11 +2,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UserSAP.Data;
 using UserSAP.Models;
+using UserSAP.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.===================================================
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+//===========Personagel Services =======================//
+builder.Services.AddScoped<UserService>();
+
 //-----------------Add DbContext------------//
 var connectionString = builder.Configuration.GetConnectionString("UserConnection");
 builder.Services.AddDbContext<UserDbContext>(opts => opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
