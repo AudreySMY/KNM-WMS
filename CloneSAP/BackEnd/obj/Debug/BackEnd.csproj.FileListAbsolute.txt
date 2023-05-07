@@ -1,8 +1,0 @@
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\bin\Debug\BackEnd.exe.config
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\bin\Debug\BackEnd.exe
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\bin\Debug\BackEnd.pdb
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\obj\Debug\BackEnd.csproj.AssemblyReference.cache
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\obj\Debug\BackEnd.csproj.SuggestedBindingRedirects.cache
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\obj\Debug\BackEnd.csproj.CoreCompileInputs.cache
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\obj\Debug\BackEnd.exe
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\BackEnd\obj\Debug\BackEnd.pdb
