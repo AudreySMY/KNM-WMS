@@ -11,7 +11,7 @@ using UserSAP.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("UserConnection");
+var connectionString = builder.Configuration["ConnectionStrings:UserConnection"];
 builder.Services.AddDbContext<UserDbContext>(opts =>
     opts.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
 );
@@ -37,7 +37,7 @@ builder.Services.AddAuthentication(opts =>
 .AddJwtBearer(opts => opts.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
 {
     ValidateIssuerSigningKey = true,
-    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A8SDU9ASDISAUD7AS6DASHFCZ9IASDASD9USA7DY7SAD")),
+    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["SymmetricSecurityKey"])),
     ValidateAudience = false,
     ValidateIssuer = false,
     ClockSkew = TimeSpan.Zero

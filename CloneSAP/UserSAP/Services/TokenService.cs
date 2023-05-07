@@ -8,6 +8,13 @@ namespace UserSAP.Services;
 
 public class TokenService
 {
+    private IConfiguration _configuration;
+
+    public TokenService(IConfiguration configuration)
+    {
+        _configuration = configuration;
+        
+    }
     public string GenerateToken(User user)
     {
         Claim[] claims = new Claim[]
@@ -17,7 +24,7 @@ public class TokenService
             new Claim(ClaimTypes.DateOfBirth, user.DateOfBirth.ToString())
 
         };
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("A8SDU9ASDISAUD7AS6DASHFCZ9IASDASD9USA7DY7SAD"));
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["SymmetricSecurityKey"]));
 
         var signingCredentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
