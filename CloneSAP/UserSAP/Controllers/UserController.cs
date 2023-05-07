@@ -26,9 +26,9 @@ public class UserController : ControllerBase
         return Ok("Usuario cadastrado");
     }
     [HttpPost("Login")]
-    public IActionResult Login(LoginUserDto dto)
+    public async Task<IActionResult> Login(LoginUserDto dto)
     {
-        _userService.Login(dto);
-        return Ok("Login OK");
+       var token = await _userService.Login(dto);
+        return Ok(token);
     }
 }

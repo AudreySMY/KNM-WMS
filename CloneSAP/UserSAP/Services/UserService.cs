@@ -11,15 +11,18 @@ public class UserService
     public UserManager<User> _userManager;
     public UserService _registerService;
     private SignInManager<User> _signInManager;
+    private TokenService _tokenService;
 
 
-    public UserService(IMapper mapper, UserManager<User> userManager, SignInManager<User> signInManager)
+    public UserService(IMapper mapper, UserManager<User> userManager, SignInManager<User> signInManager, TokenService tokenService)
     {
         _mapper = mapper;
         _userManager = userManager;
         _signInManager = signInManager;
+        _tokenService = tokenService;
     }
 
+    
 
     public async Task Register(CreateUserDto dto)
     {
@@ -30,13 +33,18 @@ public class UserService
         
     }
 
-    public async Task Login(LoginUserDto dto)
+    public async Task<string> Login(LoginUserDto dto)
     {
        var resultado = await _signInManager.PasswordSignInAsync(dto.UserName, dto.Password,false,false);
         if (!resultado.Succeeded)
         {
             throw new ApplicationException($"Failed to login {dto.UserName}");
         }
+
+        var user = _signInManager.UserManager.Users.FirstOrDefault(user => user.NormalizedUserName == dto.UserName.ToUpper());
+        var token = _tokenService.GenerateToken(user);
+        return token;
     }
 
+    
 }

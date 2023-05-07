@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 //===========Personagel Services =======================//
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<TokenService>();
 
 //-----------------Add DbContext------------//
 var connectionString = builder.Configuration.GetConnectionString("UserConnection");
