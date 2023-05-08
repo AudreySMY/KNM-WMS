@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using CloneSAP_API.Models;
 using CloneSAP_API.Data.Dtos;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.EntityFrameworkCore;
 
 namespace CloneSAP_API.Controllers;
 
@@ -34,9 +35,12 @@ public class GridController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadGridDto> GetGrid([FromQuery] int skip = 0, [FromQuery] int Take = 100)
-    {
-        return _mapper.Map<List<ReadGridDto>>(_context.Grid.Skip(skip).Take(Take));
+    public IEnumerable<ReadGridDto> GetGrid([FromQuery]string? collorCod = null, [FromQuery] string? sizeCod = null)
+    {   
+        
+        return _mapper.Map<List<ReadGridDto>>(_context.Grid);
+
+
     }
 
     [HttpGet("{id}")]

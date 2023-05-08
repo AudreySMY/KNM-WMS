@@ -4,6 +4,7 @@ using CloneSAP_API.Data.Dtos;
 using CloneSAP_API.Models;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Pomelo.EntityFrameworkCore.MySql.Query.Internal;
 using System.Text.Json;
 
@@ -36,9 +37,12 @@ public class MaterialController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadMaterialDto> GetMaterials([FromQuery] int skip = 0, [FromQuery] int Take = 100)
-    {
-        return _mapper.Map<List<ReadMaterialDto>>(_context.Material.ToList());
+    public IEnumerable<ReadMaterialDto> GetMaterials([FromQuery]string? material)
+    {   
+        if(material is null) return _mapper.Map<List<ReadMaterialDto>>(_context.Material.ToList());
+
+        return _mapper.Map<List<ReadMaterialDto>>(_context.Material.FromSql($"select * from material where material = {material}").ToList());
+
     }
     [HttpGet("{id}")]
 

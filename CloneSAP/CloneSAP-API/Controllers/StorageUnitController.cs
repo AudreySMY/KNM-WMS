@@ -33,9 +33,38 @@ public class StorageUnitController : ControllerBase
     }
     [HttpGet]
 
-    public IEnumerable<ReadStorageUnitDto> GetStorageUnits([FromQuery]int skip=0, [FromQuery] int take = 100)
+    public IEnumerable<ReadStorageUnitDto> GetStorageUnits([FromQuery] string? material, [FromQuery]string? grid, [FromQuery]int? stockid)
     {
-        return _mapper.Map<List<ReadStorageUnitDto>>(_context.StorageUnit.Skip(skip).Take(take).ToList());
+        if(material is null && grid is null && stockid is not null)
+            return _mapper.Map<List<ReadStorageUnitDto>>(
+                _context.StorageUnit
+                    .Where(su => su.SI.ID == stockid).ToList());
+
+        if (material is not null && grid is null && stockid is null)
+            return _mapper.Map<List<ReadStorageUnitDto>>(
+                _context.StorageUnit
+                    .Where(su => su.SI.Material.material == material).ToList());
+
+        if (material is  null && grid is not null && stockid is null)
+            return _mapper.Map<List<ReadStorageUnitDto>>(
+                _context.StorageUnit
+                    .Where(su => su.SI.Grid.GridCod == grid).ToList());
+
+        if (material is not null && grid is not null && stockid is null)
+            return _mapper.Map<List<ReadStorageUnitDto>>(
+                _context.StorageUnit
+                    .Where(su => su.SI.Grid.GridCod == grid 
+                        && su.SI.Material.material == material).ToList());
+
+        if (material is not null && grid is not null && stockid is not null)
+            return _mapper.Map<List<ReadStorageUnitDto>>(
+                _context.StorageUnit
+                    .Where(su => su.SI.Grid.GridCod == grid 
+                        && su.SI.Material.material == material 
+                            && su.SIID == stockid).ToList());
+
+
+        return _mapper.Map<List<ReadStorageUnitDto>>(_context.StorageUnit.ToList());
     }
 
     [HttpGet("{id}")]
