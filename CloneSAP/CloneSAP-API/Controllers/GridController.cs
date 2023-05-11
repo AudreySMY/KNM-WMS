@@ -35,10 +35,10 @@ public class GridController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadGridDto> GetGrid([FromQuery]string? collorCod = null, [FromQuery] string? sizeCod = null)
+    public IEnumerable<ReadGridDto> GetGrid([FromQuery]string? grid = null)
     {   
         
-        return _mapper.Map<List<ReadGridDto>>(_context.Grid);
+        return _mapper.Map<List<ReadGridDto>>(_context.Grid).Where(gridw =>gridw.gridCod == grid).ToList();
 
 
     }

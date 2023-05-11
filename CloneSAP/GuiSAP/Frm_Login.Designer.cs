@@ -3,14 +3,14 @@
     partial class Frm_Login
     {
         /// <summary>
-        /// Variável de designer necessária.
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Limpar os recursos que estão sendo usados.
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true se for necessário descartar os recursos gerenciados; caso contrário, false.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,114 +20,90 @@
             base.Dispose(disposing);
         }
 
-        #region Código gerado pelo Windows Form Designer
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// Método necessário para suporte ao Designer - não modifique 
-        /// o conteúdo deste método com o editor de código.
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.Btn_Log = new System.Windows.Forms.Button();
-            this.Txb_User = new System.Windows.Forms.TextBox();
-            this.Txb_Pass = new System.Windows.Forms.TextBox();
-            this.Txb_Lang = new System.Windows.Forms.TextBox();
-            this.Lbl_User = new System.Windows.Forms.Label();
-            this.Lbl_Password = new System.Windows.Forms.Label();
-            this.Lbl_Lang = new System.Windows.Forms.Label();
             this.Lbl_Title = new System.Windows.Forms.Label();
+            this.txb_username = new System.Windows.Forms.TextBox();
+            this.txb_Password = new System.Windows.Forms.TextBox();
+            this.Lbl_UserName = new System.Windows.Forms.Label();
+            this.lbl_Password = new System.Windows.Forms.Label();
+            this.Btn_Login = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // Btn_Log
-            // 
-            this.Btn_Log.Location = new System.Drawing.Point(122, 286);
-            this.Btn_Log.Name = "Btn_Log";
-            this.Btn_Log.Size = new System.Drawing.Size(246, 27);
-            this.Btn_Log.TabIndex = 0;
-            this.Btn_Log.Text = "Logar";
-            this.Btn_Log.UseVisualStyleBackColor = true;
-            this.Btn_Log.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // Txb_User
-            // 
-            this.Txb_User.Location = new System.Drawing.Point(195, 192);
-            this.Txb_User.Name = "Txb_User";
-            this.Txb_User.Size = new System.Drawing.Size(173, 20);
-            this.Txb_User.TabIndex = 1;
-            // 
-            // Txb_Pass
-            // 
-            this.Txb_Pass.Location = new System.Drawing.Point(195, 218);
-            this.Txb_Pass.MaxLength = 20;
-            this.Txb_Pass.Name = "Txb_Pass";
-            this.Txb_Pass.PasswordChar = '*';
-            this.Txb_Pass.Size = new System.Drawing.Size(173, 20);
-            this.Txb_Pass.TabIndex = 2;
-            // 
-            // Txb_Lang
-            // 
-            this.Txb_Lang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txb_Lang.Location = new System.Drawing.Point(195, 244);
-            this.Txb_Lang.MaxLength = 2;
-            this.Txb_Lang.Name = "Txb_Lang";
-            this.Txb_Lang.Size = new System.Drawing.Size(17, 20);
-            this.Txb_Lang.TabIndex = 3;
-            // 
-            // Lbl_User
-            // 
-            this.Lbl_User.AutoSize = true;
-            this.Lbl_User.Location = new System.Drawing.Point(119, 195);
-            this.Lbl_User.Name = "Lbl_User";
-            this.Lbl_User.Size = new System.Drawing.Size(68, 13);
-            this.Lbl_User.TabIndex = 4;
-            this.Lbl_User.Text = "USERNAME";
-            // 
-            // Lbl_Password
-            // 
-            this.Lbl_Password.AutoSize = true;
-            this.Lbl_Password.Location = new System.Drawing.Point(119, 221);
-            this.Lbl_Password.Name = "Lbl_Password";
-            this.Lbl_Password.Size = new System.Drawing.Size(70, 13);
-            this.Lbl_Password.TabIndex = 5;
-            this.Lbl_Password.Text = "PASSWORD";
-            // 
-            // Lbl_Lang
-            // 
-            this.Lbl_Lang.AutoSize = true;
-            this.Lbl_Lang.Location = new System.Drawing.Point(119, 247);
-            this.Lbl_Lang.Name = "Lbl_Lang";
-            this.Lbl_Lang.Size = new System.Drawing.Size(66, 13);
-            this.Lbl_Lang.TabIndex = 6;
-            this.Lbl_Lang.Text = "LANGUAGE";
             // 
             // Lbl_Title
             // 
             this.Lbl_Title.AutoSize = true;
-            this.Lbl_Title.Font = new System.Drawing.Font("Microsoft Uighur", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Title.Location = new System.Drawing.Point(109, 56);
+            this.Lbl_Title.Font = new System.Drawing.Font("Microsoft Uighur", 72F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Title.Location = new System.Drawing.Point(79, 106);
             this.Lbl_Title.Name = "Lbl_Title";
-            this.Lbl_Title.Size = new System.Drawing.Size(278, 75);
-            this.Lbl_Title.TabIndex = 7;
-            this.Lbl_Title.Text = "SAP CLONE";
-            this.Lbl_Title.Click += new System.EventHandler(this.label1_Click);
+            this.Lbl_Title.Size = new System.Drawing.Size(324, 114);
+            this.Lbl_Title.TabIndex = 0;
+            this.Lbl_Title.Text = "SapClone";
+            // 
+            // txb_username
+            // 
+            this.txb_username.Location = new System.Drawing.Point(146, 223);
+            this.txb_username.Name = "txb_username";
+            this.txb_username.Size = new System.Drawing.Size(210, 20);
+            this.txb_username.TabIndex = 1;
+            this.txb_username.TextChanged += new System.EventHandler(this.txb_username_TextChanged);
+            // 
+            // txb_Password
+            // 
+            this.txb_Password.Location = new System.Drawing.Point(146, 249);
+            this.txb_Password.Name = "txb_Password";
+            this.txb_Password.PasswordChar = '*';
+            this.txb_Password.Size = new System.Drawing.Size(210, 20);
+            this.txb_Password.TabIndex = 2;
+            this.txb_Password.TextChanged += new System.EventHandler(this.txb_Password_TextChanged);
+            // 
+            // Lbl_UserName
+            // 
+            this.Lbl_UserName.AutoSize = true;
+            this.Lbl_UserName.Location = new System.Drawing.Point(83, 226);
+            this.Lbl_UserName.Name = "Lbl_UserName";
+            this.Lbl_UserName.Size = new System.Drawing.Size(57, 13);
+            this.Lbl_UserName.TabIndex = 4;
+            this.Lbl_UserName.Text = "UserName";
+            // 
+            // lbl_Password
+            // 
+            this.lbl_Password.AutoSize = true;
+            this.lbl_Password.Location = new System.Drawing.Point(83, 252);
+            this.lbl_Password.Name = "lbl_Password";
+            this.lbl_Password.Size = new System.Drawing.Size(53, 13);
+            this.lbl_Password.TabIndex = 5;
+            this.lbl_Password.Text = "Password";
+            // 
+            // Btn_Login
+            // 
+            this.Btn_Login.Location = new System.Drawing.Point(146, 276);
+            this.Btn_Login.Name = "Btn_Login";
+            this.Btn_Login.Size = new System.Drawing.Size(210, 33);
+            this.Btn_Login.TabIndex = 6;
+            this.Btn_Login.Text = "Logar";
+            this.Btn_Login.UseVisualStyleBackColor = true;
+            this.Btn_Login.Click += new System.EventHandler(this.Btn_Login_Click);
             // 
             // Frm_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.Btn_Login);
+            this.Controls.Add(this.lbl_Password);
+            this.Controls.Add(this.Lbl_UserName);
+            this.Controls.Add(this.txb_Password);
+            this.Controls.Add(this.txb_username);
             this.Controls.Add(this.Lbl_Title);
-            this.Controls.Add(this.Lbl_Lang);
-            this.Controls.Add(this.Lbl_Password);
-            this.Controls.Add(this.Lbl_User);
-            this.Controls.Add(this.Txb_Lang);
-            this.Controls.Add(this.Txb_Pass);
-            this.Controls.Add(this.Txb_User);
-            this.Controls.Add(this.Btn_Log);
             this.Name = "Frm_Login";
-            this.Text = "Login";
+            this.Text = "Mean";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,14 +111,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button Btn_Log;
-        private System.Windows.Forms.TextBox Txb_User;
-        private System.Windows.Forms.TextBox Txb_Pass;
-        private System.Windows.Forms.TextBox Txb_Lang;
-        private System.Windows.Forms.Label Lbl_User;
-        private System.Windows.Forms.Label Lbl_Password;
-        private System.Windows.Forms.Label Lbl_Lang;
         private System.Windows.Forms.Label Lbl_Title;
+        private System.Windows.Forms.TextBox txb_username;
+        private System.Windows.Forms.TextBox txb_Password;
+        private System.Windows.Forms.Label Lbl_UserName;
+        private System.Windows.Forms.Label lbl_Password;
+        private System.Windows.Forms.Button Btn_Login;
     }
 }
-
