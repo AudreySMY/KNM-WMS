@@ -43,10 +43,13 @@ C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Mi
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Microsoft.IdentityModel.Logging.xml
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.Home.resources
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Krypton.Navigator.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Krypton.Toolkit.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\PagedControl.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\TabControl.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Krypton.Navigator.xml
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\bin\Debug\Krypton.Toolkit.xml
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.Frm_Home.resources
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.UC_mean.resources
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.MenusUC.UC_mb51.resources
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.MenusUC.UC_Menu.resources

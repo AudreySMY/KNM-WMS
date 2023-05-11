@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GuiSAP
+namespace GuiSAP.MenusUC
 {
-    public partial class Home : Form
+    public partial class UC_mb51 : UserControl
     {
-        public Home()
+        public UC_mb51()
         {
             InitializeComponent();
-        }
-
-        private void kryptonTreeView1_AfterSelect(object sender, TreeViewEventArgs e)
-        {
-
         }
     }
 }

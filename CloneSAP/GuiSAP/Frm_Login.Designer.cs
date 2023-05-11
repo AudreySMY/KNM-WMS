@@ -52,7 +52,8 @@
             this.txb_username.Name = "txb_username";
             this.txb_username.Size = new System.Drawing.Size(210, 20);
             this.txb_username.TabIndex = 1;
-            this.txb_username.TextChanged += new System.EventHandler(this.txb_username_TextChanged);
+            this.txb_username.Text = "yuriel";
+            this.txb_username.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txb_username_MouseDown);
             // 
             // txb_Password
             // 
@@ -61,6 +62,7 @@
             this.txb_Password.PasswordChar = '*';
             this.txb_Password.Size = new System.Drawing.Size(210, 20);
             this.txb_Password.TabIndex = 2;
+            this.txb_Password.Text = "Umpa98@";
             this.txb_Password.TextChanged += new System.EventHandler(this.txb_Password_TextChanged);
             // 
             // Lbl_UserName
@@ -104,6 +106,7 @@
             this.Controls.Add(this.Lbl_Title);
             this.Name = "Frm_Login";
             this.Text = "Mean";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Frm_Login_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -28,37 +28,53 @@ namespace GuiSAP
 
         private async void Btn_Login_Click(object sender, EventArgs e)
         {
+
             var username = txb_username.Text;
             var password = txb_Password.Text;
-            string token = await Request.RequestLogin(username,password);  
-            (string username,string id) valores = Decode.decodeToken(token);
+            string token = await Request.RequestLogin(username, password);
+            (string username, string id) valores = Decode.decodeToken(token);
 
             userlogado.Token = token;
             userlogado.Id = valores.id;
             userlogado.Name = valores.username;
             bool result = token == null;
-            if(!result)
+            if (!result)
             {
                 this.Hide();
-                Home home= new Home();
+                Frm_Home home = new Frm_Home();
                 home.Show();
             }
 
         }
 
-        private void lbl_token_Click(object sender, EventArgs e)
+        private async void Frm_Login_KeyDown(object sender, KeyEventArgs e)
         {
+            if(e.KeyCode == Keys.Enter)
+            {
+                e.Handled = e.SuppressKeyPress = true;
+                var username = txb_username.Text;
+                var password = txb_Password.Text;
+                string token = await Request.RequestLogin(username, password);
+                (string username, string id) valores = Decode.decodeToken(token);
 
+                userlogado.Token = token;
+                userlogado.Id = valores.id;
+                userlogado.Name = valores.username;
+                bool result = token == null;
+                if (!result)
+                {
+                    this.Hide();
+                    Frm_Home home = new Frm_Home();
+                    home.Show();
+                }
+
+            }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void txb_username_MouseDown(object sender, MouseEventArgs e)
         {
 
         }
     }
+    
 }

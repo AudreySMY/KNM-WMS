@@ -96,19 +96,47 @@
     <Compile Include="Frm_Login.Designer.cs">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Frm_Home.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Frm_Home.Designer.cs">
+      <DependentUpon>Frm_Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="MenusUC\UC_mb51.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenusUC\UC_mb51.Designer.cs">
+      <DependentUpon>UC_mb51.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenusUC\UC_mean.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenusUC\UC_mean.Designer.cs">
+      <DependentUpon>UC_mean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenusUC\UC_Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenusUC\UC_Menu.Designer.cs">
+      <DependentUpon>UC_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menus.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Frm_Home.resx">
+      <DependentUpon>Frm_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenusUC\UC_mb51.resx">
+      <DependentUpon>UC_mb51.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenusUC\UC_mean.resx">
+      <DependentUpon>UC_mean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenusUC\UC_Menu.resx">
+      <DependentUpon>UC_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,9 +161,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\SAPLib\SAPLib.csproj">
       <Project>{4f4c9d2c-1dd7-427d-ab24-ab3a69a4e4d7}</Project>
