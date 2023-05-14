@@ -1,9 +1,12 @@
 ﻿using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SAPLib.Models;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,9 +14,9 @@ namespace SAPLib.Funcions
 {
     public class Decode
     {
-        public static (string usernameR,string idR ) decodeToken(string token)
+        public static (string usernameR, string idR) decodeToken(string token)
         {
-            
+
             JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 
             TokenValidationParameters parameters = new TokenValidationParameters
@@ -37,7 +40,7 @@ namespace SAPLib.Funcions
             {
                 Console.WriteLine("Erro ao decodificar o token: " + ex.Message);
             }
-            return(null, null);
+            return (null, null);
         }
     }
 }

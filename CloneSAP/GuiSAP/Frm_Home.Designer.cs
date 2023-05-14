@@ -81,6 +81,7 @@
             // Txb_menu
             // 
             this.Txb_menu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Txb_menu.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Txb_menu.Name = "Txb_menu";
             this.Txb_menu.Size = new System.Drawing.Size(100, 25);
             this.Txb_menu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Txb_menu_KeyDown);
@@ -150,6 +151,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Home";
             this.Text = "Home";
+            this.Load += new System.EventHandler(this.Frm_Home_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

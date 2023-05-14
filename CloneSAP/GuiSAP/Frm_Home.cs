@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SAPLib.Funcions;
 
 namespace GuiSAP
 {
@@ -17,46 +18,36 @@ namespace GuiSAP
         {
             InitializeComponent();
         }
-        private void desableUC(Panel panel)
-        {
-            foreach (Control control in panel.Controls) 
-            {
-                if (control is UserControl) 
-                {
-                    panel.Controls.Remove(control);
-                }
-            }
-        }
         private void menuChange(string menu)
         {
             
             switch (menu)
             {
                 case "MB11":
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu);
+
                     break;
                 case "MB51":
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu); ;
                     UC_mb51 mb51 = new UC_mb51();
                     Pnl_menu.Controls.Add(mb51);
                     break;
                 case "LT27":
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu); ;
                     break;
                 case "MB24":
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu); ;
                     break;
                 case "MEAN":
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu); ;
                     UC_mean mean = new UC_mean();
                     Pnl_menu.Controls.Add(mean);
-                    
                     break;
                 case "LQUA":
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu); ;
                     break;
                 default:
-                    desableUC(Pnl_menu);
+                    Forms.RomoveAllControl(Pnl_menu); ;
                     Pnl_menu.Visible = true;
                     break;
 
@@ -86,5 +77,9 @@ namespace GuiSAP
             menuChange(menu);
         }
 
+        private void Frm_Home_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

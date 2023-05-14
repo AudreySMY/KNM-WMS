@@ -17,7 +17,6 @@ C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\Sy
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.Memory.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.Text.Json.dll
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\SAPLib\bin\Debug\System.Threading.Tasks.Extensions.dll

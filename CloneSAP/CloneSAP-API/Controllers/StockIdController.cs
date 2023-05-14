@@ -34,29 +34,29 @@ public class StockIdController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<ReadStockIDDto> GetGrid([FromQuery]string? grid = null, [FromQuery]string? material= null)
+    public IEnumerable<ReadStockIDDto> GetGrid([FromQuery]string? grid, [FromQuery]string? material)
     {
-        if (grid is not null && material is null)
-            return _mapper.Map<List<ReadStockIDDto>>(
-                _context.StockID.Where(stockid =>
-                stockid.Grid.GridCod == grid)
-                .ToList());
+          if (grid is not null && material is null)
+               return _mapper.Map<List<ReadStockIDDto>>(_context.StockID
+                   .Where(stockid =>stockid.Grid.GridCod == grid)
+                   .ToList());
 
-        if (grid is null && material is not null)
-            return _mapper.Map<List<ReadStockIDDto>>(_context.StockID
-                .Where(stockid =>stockid.Material.material == material)
-                .ToList());
-       
+           if (grid is null && material is not null)
+               return _mapper.Map<List<ReadStockIDDto>>(_context.StockID
+                   .Where(stockid =>stockid.Material.material == material)
+                   .ToList());
+           if (grid is not null && material is not null)
+                return _mapper.Map<List<ReadStockIDDto>>(_context.StockID
+                    .Where(stockid => stockid.Material.material == material && stockid.Grid.GridCod == grid)
+                    .ToList());
 
-        if (grid is not null && material is not null)
-            return _mapper.Map<List<ReadStockIDDto>>(_context.StockID
-                .Where(stockid => stockid.Material.material == material && stockid.Grid.GridCod == grid)
-                .ToList());
+           return _mapper.Map<List<ReadStockIDDto>>(
+           _context.StockID
+           .ToList());
 
-        return _mapper.Map<List<ReadStockIDDto>>(
-            _context.StockID
-            .ToList());
-}
+
+        
+    }
 
     [HttpGet("{id}")]
 

@@ -53,3 +53,5 @@ C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\Gu
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.UC_mean.resources
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.MenusUC.UC_mb51.resources
 C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.MenusUC.UC_Menu.resources
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.MenusUC.UC_ResultMean.resources
+C:\Users\Yuriel Audrey\Desktop\Portifolio\Clone-SAP\CloneSAP\GuiSAP\obj\Debug\GuiSAP.MenusUC.UC_Query.resources

@@ -4,8 +4,8 @@ using System.Windows.Forms;
 namespace GuiSAP
 {
     internal static class Program
-    {   
-
+    {
+       
 
         [STAThread]
         static void Main()

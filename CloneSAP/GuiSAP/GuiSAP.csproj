@@ -108,10 +108,10 @@
     <Compile Include="MenusUC\UC_mb51.Designer.cs">
       <DependentUpon>UC_mb51.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenusUC\UC_mean.cs">
+    <Compile Include="MenusUC\Mean\UC_mean.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="MenusUC\UC_mean.Designer.cs">
+    <Compile Include="MenusUC\Mean\UC_mean.Designer.cs">
       <DependentUpon>UC_mean.cs</DependentUpon>
     </Compile>
     <Compile Include="MenusUC\UC_Menu.cs">
@@ -119,6 +119,18 @@
     </Compile>
     <Compile Include="MenusUC\UC_Menu.Designer.cs">
       <DependentUpon>UC_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenusUC\Mean\UC_Query.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenusUC\Mean\UC_Query.Designer.cs">
+      <DependentUpon>UC_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenusUC\Mean\UC_ResultMean.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MenusUC\Mean\UC_ResultMean.Designer.cs">
+      <DependentUpon>UC_ResultMean.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Menus.cs" />
     <Compile Include="Program.cs" />
@@ -132,11 +144,17 @@
     <EmbeddedResource Include="MenusUC\UC_mb51.resx">
       <DependentUpon>UC_mb51.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenusUC\UC_mean.resx">
+    <EmbeddedResource Include="MenusUC\Mean\UC_mean.resx">
       <DependentUpon>UC_mean.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenusUC\UC_Menu.resx">
       <DependentUpon>UC_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenusUC\Mean\UC_Query.resx">
+      <DependentUpon>UC_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenusUC\Mean\UC_ResultMean.resx">
+      <DependentUpon>UC_ResultMean.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,12 +179,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Icon\relogio-preto.png" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SAPLib\SAPLib.csproj">
       <Project>{4f4c9d2c-1dd7-427d-ab24-ab3a69a4e4d7}</Project>
       <Name>SAPLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
