@@ -33,9 +33,10 @@ namespace SAPLib.Functions
             return e.Message;
         }
 
-       public static async Task<List<StockID>> getStockID(string? material,string? grid)
-       {    
-
+       public static async Task<List<StockID>> getStockID(string? materialQ,string? gridQ)
+       {
+            var material = materialQ.ToUpper();
+            var grid = gridQ.ToUpper();
             var clienteHttp = new HttpClient();
             string addString="";
 

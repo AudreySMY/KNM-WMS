@@ -8,7 +8,8 @@ namespace SAPLib.Models
 {
     public class StockID
     {
-
+            
+            public int ID { get; set; }
             public int stockIDn { get; set; }
             public int materialId { get; set; }
             public Material material { get; set; }

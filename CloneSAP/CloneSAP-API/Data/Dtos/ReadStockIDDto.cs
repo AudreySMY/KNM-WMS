@@ -5,7 +5,11 @@ namespace CloneSAP_API.Data.Dtos;
 
 public class ReadStockIDDto
 {
-
+    public ReadStockIDDto()
+    {
+        stockIDn = ID;
+    }
+    public int ID { get; set; }
     public int stockIDn { get; set; }
 
     public int materialId { get; set; }

@@ -17,6 +17,7 @@ namespace GuiSAP
         public Frm_Home()
         {
             InitializeComponent();
+            
         }
         private void menuChange(string menu)
         {
@@ -79,7 +80,8 @@ namespace GuiSAP
 
         private void Frm_Home_Load(object sender, EventArgs e)
         {
-
+            UC_Menu menu = new UC_Menu();
+            Pnl_menu.Controls.Add(menu);
         }
     }
 }

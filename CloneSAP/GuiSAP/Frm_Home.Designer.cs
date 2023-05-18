@@ -131,10 +131,9 @@
             // Pnl_menu
             // 
             this.Pnl_menu.BackColor = System.Drawing.SystemColors.Info;
-            this.Pnl_menu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Pnl_menu.Location = new System.Drawing.Point(0, 49);
+            this.Pnl_menu.Location = new System.Drawing.Point(12, 61);
             this.Pnl_menu.Name = "Pnl_menu";
-            this.Pnl_menu.Size = new System.Drawing.Size(784, 712);
+            this.Pnl_menu.Size = new System.Drawing.Size(760, 688);
             this.Pnl_menu.TabIndex = 2;
             this.Pnl_menu.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
