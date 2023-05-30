@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "5EZ7ozpaTZZiOGcwjcK2v945ZqNy4FvA0QWBlKCWiLc=",
+  "Source": "KNM-UserAPI",
+  "BasePath": "_content/KNM-UserAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

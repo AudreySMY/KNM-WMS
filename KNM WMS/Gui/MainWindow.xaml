@@ -1,0 +1,78 @@
+﻿<Window x:Class="Gui.MainWindow"
+        xmlns:custom="clr-namespace:Gui"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gui"
+        mc:Ignorable="d"
+        Title="KM Warehouse System"
+        Background="#414141"
+        Height="600"
+        Width="1000">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+
+    <Grid x:Name="grid" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="524.04"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="636" />
+            <ColumnDefinition MaxWidth="200" />
+
+
+        </Grid.ColumnDefinitions>
+
+
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  HorizontalAlignment="Stretch">
+            <Menu Style="{StaticResource MenuStyle}"   HorizontalAlignment="Stretch" DockPanel.Dock="Top" HorizontalContentAlignment="Stretch" >
+                <MenuItem  Header="Archive" Style="{StaticResource MenuButton}" FocusVisualStyle="{x:Null}">
+                    <MenuItem Header="Open New Windows" Style="{StaticResource Menu}"/>
+                    <MenuItem Header="Close Windows" Style="{StaticResource Menu}"/>
+                    <MenuItem Header="Disconnect" Style="{StaticResource Menu}"/>
+                </MenuItem>
+
+                <MenuItem Header="View" Style="{StaticResource MenuButton}" >
+                    <MenuItem Header="Fonts" Style="{StaticResource MenuTree}"/>
+                    <MenuItem Header="Themes" Style="{StaticResource MenuTree}"/>
+                    <MenuItem Header="Acessebility Mode" Style="{StaticResource Menu}"/>
+                </MenuItem>
+
+                <MenuItem Header="Settings" Style="{StaticResource MenuButton}"/>
+                <MenuItem Header="User Setings" Style="{StaticResource MenuButton}"/>
+            </Menu>
+        </DockPanel>
+        <Menu Style="{StaticResource MenuStyle}" Grid.Column="0" Grid.ColumnSpan="3" Height="30" Grid.Row="1" VerticalAlignment="Center"  >
+            <TextBox x:Name="Txb_Menu" Width="100" Height="21" Background="#717171" BorderBrush="#212121" Text="Digite Aqui" Foreground="WhiteSmoke" TextAlignment="Center" Margin="5,0,5,0" />
+        </Menu>
+
+        <Menu Grid.Column="0" FocusVisualStyle="{x:Null}" Grid.Row="2" DockPanel.Dock="Left" BorderBrush="#414141" Background="#414141" HorizontalAlignment="Stretch" VerticalContentAlignment="Center">
+            <DockPanel >
+                <MenuItem Header="Homen" Style="{StaticResource MenuTree}" Click="HomeItem_Click"/>
+                <MenuItem Header="Consult Models" Style="{StaticResource MenuTree}" Click="MeanItem_Click" />
+                <MenuItem Header="Stock Location Historic" Style="{StaticResource MenuTree}" />
+                <MenuItem Header="Position Search" Style="{StaticResource MenuTree}" />
+                <MenuItem Header="Register Storage Unit" Style="{StaticResource MenuTree}"/>
+                <MenuItem Header="Register Material" Style="{StaticResource MenuTree}"/>
+                <MenuItem Header="Register Grid" Style="{StaticResource MenuTree}"/>
+                <MenuItem Header="Register Stock ID" Style="{StaticResource MenuTree}"/>
+                <MenuItem Header="Count Cycle" Style="{StaticResource MenuTree}"/>
+                <MenuItem Header="Move Storage Unit" Style="{StaticResource MenuTree}"/>
+            </DockPanel>
+        </Menu>
+        <Canvas x:Name="canvas_UserC" Grid.Column="1" Grid.Row="2" >
+            <custom:Home ></custom:Home>
+        </Canvas>
+    </Grid>
+</Window>

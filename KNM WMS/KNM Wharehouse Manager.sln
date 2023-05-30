@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNMGui", "Gui\KNMGui.csproj", "{435D8970-E0CC-41C0-80BE-EA4E971515B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Script", "Script\Script.csproj", "{7EB65520-EE7C-43FA-9534-5DFD4D361771}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API's", "API's", "{F5160015-83BD-4B43-94E4-813520A0C949}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{88AE61E8-09A1-451B-977A-F722D79EDB67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNM-API", "KNM-API\KNM-API.csproj", "{BAB52F83-A9DC-4F52-A561-9B0F26FBE1ED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KNM-UserAPI", "KNMUser-API\KNM-UserAPI.csproj", "{CAA91326-F3B7-46C1-A49F-D4C6C48C0ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KNMLib", "KNMLib\KNMLib.csproj", "{4F4C9D2C-1DD7-427D-AB24-AB3A69A4E4D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{435D8970-E0CC-41C0-80BE-EA4E971515B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435D8970-E0CC-41C0-80BE-EA4E971515B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435D8970-E0CC-41C0-80BE-EA4E971515B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435D8970-E0CC-41C0-80BE-EA4E971515B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EB65520-EE7C-43FA-9534-5DFD4D361771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EB65520-EE7C-43FA-9534-5DFD4D361771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EB65520-EE7C-43FA-9534-5DFD4D361771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EB65520-EE7C-43FA-9534-5DFD4D361771}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAB52F83-A9DC-4F52-A561-9B0F26FBE1ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAB52F83-A9DC-4F52-A561-9B0F26FBE1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAB52F83-A9DC-4F52-A561-9B0F26FBE1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAB52F83-A9DC-4F52-A561-9B0F26FBE1ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA91326-F3B7-46C1-A49F-D4C6C48C0ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA91326-F3B7-46C1-A49F-D4C6C48C0ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA91326-F3B7-46C1-A49F-D4C6C48C0ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA91326-F3B7-46C1-A49F-D4C6C48C0ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F4C9D2C-1DD7-427D-AB24-AB3A69A4E4D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4C9D2C-1DD7-427D-AB24-AB3A69A4E4D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4C9D2C-1DD7-427D-AB24-AB3A69A4E4D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4C9D2C-1DD7-427D-AB24-AB3A69A4E4D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7EB65520-EE7C-43FA-9534-5DFD4D361771} = {88AE61E8-09A1-451B-977A-F722D79EDB67}
+		{BAB52F83-A9DC-4F52-A561-9B0F26FBE1ED} = {F5160015-83BD-4B43-94E4-813520A0C949}
+		{CAA91326-F3B7-46C1-A49F-D4C6C48C0ECB} = {F5160015-83BD-4B43-94E4-813520A0C949}
+		{4F4C9D2C-1DD7-427D-AB24-AB3A69A4E4D7} = {88AE61E8-09A1-451B-977A-F722D79EDB67}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A1D4952A-9444-48BE-BB57-B1DE2206F380}
+	EndGlobalSection
+EndGlobal
